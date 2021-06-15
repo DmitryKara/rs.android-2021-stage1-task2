@@ -4,6 +4,14 @@ class Abbreviation {
 
     // TODO: Complete the following function
     fun abbreviationFromA(a: String, b: String): String {
-        throw NotImplementedError("Not implemented")
+
+        val registerA = a.toUpperCase()
+        var j = ""
+        for (i in registerA){
+            if (b.contains(i)) j += i
+        }
+        return if (j == b)
+            "YES"
+        else "NO"
     }
 }
